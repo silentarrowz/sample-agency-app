@@ -7,7 +7,7 @@ const config = require('./config');
 //     database:'agency-app'
 // });
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: config.HOST, //'localhost',
     user: config.USER,//'faraz',
     password: config.PASSWORD, //'root',
