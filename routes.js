@@ -4,6 +4,12 @@ const {verifyToken} = require('./auth');
 const mysql = require('mysql');
 const db = require('./db');
 
+
+routes.get('/', (req,res) =>{
+    res.send('the app is ready');
+});
+
+
 routes.post('/login',(req,res)=>{
     console.log('token : ',token);
     const result = {
