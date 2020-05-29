@@ -14,13 +14,13 @@ const db = mysql.createPool({
     database: config.DB //'agency-app'
 });
 
-db.connect((err)=>{
-    if(err){
-        throw err;
-    }else{
-        console.log('connected to database');
-    }
-});
+// db.connect((err)=>{
+//     if(err){
+//         throw err;
+//     }else{
+//         console.log('connected to database');
+//     }
+// });
 
 module.exports = db;
 
