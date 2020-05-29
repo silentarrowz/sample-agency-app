@@ -12,7 +12,8 @@ routes.post('/login',(req,res)=>{
     }
     res.send(result);
 });
-routes.post('/create',(req,res)=>{
+
+routes.post('/create', verifyToken, (req,res)=>{
     console.log('req.body',req.body);
     const {agency_name, addr1,addr2,state,city,agency_phone, client_name,email,client_phone,total_bill} = req.body;
     const insertQuery =  "INSERT INTO agency (agency_name,addr1,addr2,state,city,agency_phone) VALUES (?,?,?,?,?,?)";

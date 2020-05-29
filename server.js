@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 
 app.use('/',routes);
 
-app.set('port', 8000);
+const port = process.env.PORT || 8000;
 
-app.listen(app.get('port'),()=>{
-    console.log('server listening on port : ', app.get('port'));
+app.listen(port,()=>{
+    console.log('server listening on port : ', port);
 });
